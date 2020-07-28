@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E46C37C9C8699C81FD41A70 /* Pods_sudo_Canvality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF41D738F9AF4AFAEF48DB65 /* Pods_sudo_Canvality.framework */; };
 		EB13E9AC24D0991500123DD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB13E9AB24D0991500123DD1 /* AppDelegate.swift */; };
 		EB13E9AE24D0991500123DD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB13E9AD24D0991500123DD1 /* SceneDelegate.swift */; };
 		EB13E9B024D0991500123DD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB13E9AF24D0991500123DD1 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4320564D97018E19DD1EADB3 /* Pods-sudo Canvality.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sudo Canvality.release.xcconfig"; path = "Target Support Files/Pods-sudo Canvality/Pods-sudo Canvality.release.xcconfig"; sourceTree = "<group>"; };
+		C624820D3098F066D463C7C8 /* Pods-sudo Canvality.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sudo Canvality.debug.xcconfig"; path = "Target Support Files/Pods-sudo Canvality/Pods-sudo Canvality.debug.xcconfig"; sourceTree = "<group>"; };
+		CF41D738F9AF4AFAEF48DB65 /* Pods_sudo_Canvality.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sudo_Canvality.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB13E9A824D0991500123DD1 /* sudo Canvality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sudo Canvality.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB13E9AB24D0991500123DD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB13E9AD24D0991500123DD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E46C37C9C8699C81FD41A70 /* Pods_sudo_Canvality.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13EC8F71D63C2F076FD9E548 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF41D738F9AF4AFAEF48DB65 /* Pods_sudo_Canvality.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9EBD70D431CA1399FDADD696 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C624820D3098F066D463C7C8 /* Pods-sudo Canvality.debug.xcconfig */,
+				4320564D97018E19DD1EADB3 /* Pods-sudo Canvality.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EB13E99F24D0991500123DD1 = {
 			isa = PBXGroup;
 			children = (
 				EB13E9AA24D0991500123DD1 /* sudo Canvality */,
 				EB13E9A924D0991500123DD1 /* Products */,
+				9EBD70D431CA1399FDADD696 /* Pods */,
+				13EC8F71D63C2F076FD9E548 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB13E9BC24D0991600123DD1 /* Build configuration list for PBXNativeTarget "sudo Canvality" */;
 			buildPhases = (
+				6CF984B0CF7024C9BC4BB99B /* [CP] Check Pods Manifest.lock */,
 				EB13E9A424D0991500123DD1 /* Sources */,
 				EB13E9A524D0991500123DD1 /* Frameworks */,
 				EB13E9A624D0991500123DD1 /* Resources */,
+				D41E5456211D2F2B7CA26763 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6CF984B0CF7024C9BC4BB99B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sudo Canvality-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D41E5456211D2F2B7CA26763 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sudo Canvality/Pods-sudo Canvality-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sudo Canvality/Pods-sudo Canvality-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sudo Canvality/Pods-sudo Canvality-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB13E9A424D0991500123DD1 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		EB13E9BD24D0991600123DD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C624820D3098F066D463C7C8 /* Pods-sudo Canvality.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		EB13E9BE24D0991600123DD1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4320564D97018E19DD1EADB3 /* Pods-sudo Canvality.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
